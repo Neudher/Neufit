@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Configurações Neufit</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<header>
+
+<h1>⚙️ Configurações</h1>
+
+</header>
+
+
+<div class="card">
+
+<h2>🎯 Meta de peso</h2>
+
+<input 
+id="metaPeso"
+type="number"
+placeholder="Ex: 90">
+
+
+<button onclick="salvarMeta()">
+Salvar meta
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>💊 Medicamento</h2>
+
+<input 
+id="horaMedicamento"
+type="time">
+
+
+<button onclick="salvarHorario()">
+Salvar horário
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>📲 Notificações</h2>
+
+
+<button onclick="ativarNotificacoes()">
+
+Ativar notificações
+
+</button>
+
+
+<p id="status"></p>
+
+
+</div>
+
+
+
+<script src="configuracoes.js"></script>
+
+</body>
+
+</html>
