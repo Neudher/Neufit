@@ -87,3 +87,32 @@ background:white;
 transition:1s;
 
 }
+.grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:10px;
+
+}
+
+
+.atalho{
+
+text-align:center;
+
+font-size:30px;
+
+text-decoration:none;
+
+color:white;
+
+}
+
+
+.destaque{
+
+text-align:center;
+
+}
