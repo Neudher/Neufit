@@ -12,4 +12,10 @@ new Notification("Neufit 💪",{
 
 },5000);
 
+}if("serviceWorker" in navigator){
+
+navigator.serviceWorker.register(
+"service-worker.js"
+);
+
 }
