@@ -62,3 +62,50 @@ document.getElementById("status")
 `Lembrete marcado para ${hora} 💊`;
 
 }
+let pesoInicial = 135;
+
+let pesoMeta = 90;
+
+
+let pesoAtual =
+Number(localStorage.getItem("peso"))
+|| pesoInicial;
+
+
+let perdeu =
+pesoInicial - pesoAtual;
+
+
+let total =
+pesoInicial - pesoMeta;
+
+
+let porcentagem =
+(perdeu / total) * 100;
+
+
+if(porcentagem < 0){
+porcentagem = 0;
+}
+
+
+if(porcentagem > 100){
+porcentagem = 100;
+}
+
+
+
+document.getElementById("metaTexto")
+.innerHTML =
+
+`
+Peso atual: ${pesoAtual} kg<br>
+Objetivo: ${pesoMeta} kg<br>
+Faltam: ${(pesoAtual-pesoMeta).toFixed(1)} kg
+`;
+
+
+
+document.getElementById("progresso")
+.style.width =
+porcentagem.toFixed(0)+"%";
