@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Neufit Perfil</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>💪 Neufit</h1>
+<h3>Meu Perfil</h3>
+</header>
+
+
+<div class="card">
+
+<label>Nome:</label>
+<input id="nome" type="text">
+
+
+<label>Peso (kg):</label>
+<input id="peso" type="number">
+
+
+<label>Altura (m):</label>
+<input id="altura" type="number" step="0.01">
+
+
+<button onclick="salvarPerfil()">
+Salvar
+</button>
+
+
+<h2 id="resultado"></h2>
+
+</div>
+
+
+<script src="perfil.js"></script>
+
+</body>
+</html>
