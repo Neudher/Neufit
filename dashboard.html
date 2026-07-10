@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Neufit Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>💪 Neufit</h1>
+<p id="saudacao"></p>
+</header>
+
+
+<div class="card">
+
+<h2>📊 Minha evolução</h2>
+
+<p id="dados"></p>
+
+</div>
+
+
+<div class="card">
+
+<h2>💧 Água</h2>
+
+<button onclick="beberAgua()">
++ 1 copo
+</button>
+
+<p id="agua">
+0 copos hoje
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>💊 Medicamento</h2>
+
+<input type="time" id="horaRemedio">
+
+<button onclick="salvarRemedio()">
+Ativar lembrete
+</button>
+
+<p id="status"></p>
+
+</div>
+
+
+<div class="card">
+
+<h2>🔥 Meta diária</h2>
+
+<p>
+🏋️ Treino: 0/1<br>
+🥗 Dieta: 0/3<br>
+💧 Água: 0/8
+</p>
+
+</div>
+
+
+<script src="dashboard.js"></script>
+
+</body>
+
+</html>
