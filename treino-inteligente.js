@@ -1,4 +1,12 @@
-function concluirTreino(){
+function concluirTreino(let xpAtual =
+Number(localStorage.getItem("xp"))
+|| 0;
+
+
+localStorage.setItem(
+"xp",
+xpAtual + 50
+);){
 
 let hoje =
 new Date().toLocaleDateString();
