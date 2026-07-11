@@ -1,47 +1,11 @@
-const CACHE_NAME = "neufit-v1";
-
-const arquivos = [
-"index.html",
-"dashboard.html",
-"treino.html",
-"dieta.html",
-"perfil.html",
-"style.css",
-"app.js",
-"dashboard.js",
-"treino.js",
-"perfil.js"
-];
-
-
-self.addEventListener("install", evento => {
-
-evento.waitUntil(
-
-caches.open(CACHE_NAME)
-.then(cache => {
-
-return cache.addAll(arquivos);
-
-})
-
-);
-
+const CACHE_NAME = 'neufit-v1';
+const urlsToCache = ['/', '/index.html', '/style.css', '/app.js', '/db.js', '/utils.js', '/main.js'];
+self.addEventListener('install', event => {
+    event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(urlsToCache)));
 });
-
-
-
-self.addEventListener("fetch", evento => {
-
-evento.respondWith(
-
-caches.match(evento.request)
-.then(resposta => {
-
-return resposta || fetch(evento.request);
-
-})
-
-);
-
+self.addEventListener('fetch', event => {
+    event.respondWith(caches.match(event.request).then(response => response || fetch(event.request)).catch(() => caches.match('index.html')));
+});
+self.addEventListener('activate', event => {
+    event.waitUntil(caches.keys().then(cacheNames => Promise.all(cacheNames.map(c => c !== CACHE_NAME ? caches.delete(c) : null))));
 });

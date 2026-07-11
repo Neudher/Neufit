@@ -1,46 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Neufit</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="description" content="Neufit - Sua evolução todos os dias">
+    <title>Neufit 💪</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icon-192.png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<header>
-<h1>💪 Neufit</h1>
-<p>Sua evolução todos os dias</p>
-</header>
-
-
-<div class="card">
-
-<h2>🔥 Bem-vindo ao Neufit</h2>
-
-<p>
-Treino, dieta e acompanhamento da sua evolução.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h2>🎯 Objetivo</h2>
-
-<p>
-Emagrecimento + musculação + qualidade de vida.
-</p>
-
-</div>
-
-
+    <div id="app"></div>
+    <script src="db.js"></script>
+    <script src="utils.js"></script>
+    <script src="app.js"></script>
+    <script src="main.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js');
+        }
+    </script>
 </body>
-
 </html>
